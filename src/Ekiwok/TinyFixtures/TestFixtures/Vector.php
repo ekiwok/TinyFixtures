@@ -2,6 +2,8 @@
 
 namespace Ekiwok\TinyFixtures\TestFixtures;
 
+use Ekiwok\TinyFixtures\Nested\Foo;
+
 class Vector
 {
     /**
@@ -13,6 +15,27 @@ class Vector
      * @var Point
      */
     private $end;
+
+    /**
+     * @var
+     */
+    private $withEmptyVar;
+
+    /**
+     * @var string
+     * @var Point
+     */
+    private $withDoubledAnnotation;
+
+    /**
+     * @var Point|string|Vector|null
+     */
+    private $mayVary;
+
+    /**
+     * @var Foo
+     */
+    private $nested;
 
     /**
      * @param Point $start

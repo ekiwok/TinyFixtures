@@ -2,6 +2,7 @@
 
 namespace spec\Ekiwok\TinyFixtures;
 
+use Ekiwok\TinyFixtures\Nested\Foo;
 use Ekiwok\TinyFixtures\PropertyClassGuesser;
 use Ekiwok\TinyFixtures\TestFixtures\Point;
 use Ekiwok\TinyFixtures\TestFixtures\Vector;
@@ -34,5 +35,33 @@ class PropertyClassGuesserSpec extends ObjectBehavior
         $property = (new \ReflectionClass(Vector::class))->getProperty('end');
 
         $this->guess($property)->shouldMatch(sprintf('/^(\\\\){0,1}%s$/', addslashes(Point::class)));
+    }
+
+    function it_should_not_crash_on_empty_var()
+    {
+        $property = (new \ReflectionClass(Vector::class))->getProperty('withEmptyVar');
+
+        $this->guess($property)->shouldBeLike(false);
+    }
+
+    function it_should_not_crash_on_repeated_annotation()
+    {
+        $property = (new \ReflectionClass(Vector::class))->getProperty('withDoubledAnnotation');
+
+        $this->guess($property)->shouldBeLike(false);
+    }
+
+    function it_should_pick_class_if_there_are_many_possibilities()
+    {
+        $property = (new \ReflectionClass(Vector::class))->getProperty('mayVary');
+
+        $this->guess($property)->shouldMatch(sprintf('/^(\\\\){0,1}%s$/', addslashes(Point::class)));
+    }
+
+    function it_should_pick_nested_class()
+    {
+        $property = (new \ReflectionClass(Vector::class))->getProperty('nested');
+
+        $this->guess($property)->shouldMatch(sprintf('/^(\\\\){0,1}%s$/', addslashes(Foo::class)));
     }
 }
