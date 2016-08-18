@@ -3,8 +3,8 @@
 namespace spec\Ekiwok\TinyFixtures;
 
 use Ekiwok\TinyFixtures\FixturesGenerator;
-use Ekiwok\TinyFixtures\TestFixtures\Point;
-use Ekiwok\TinyFixtures\TestFixtures\Vector;
+use spec\Ekiwok\TinyFixtures\TestFixtures\Point;
+use spec\Ekiwok\TinyFixtures\TestFixtures\Vector;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

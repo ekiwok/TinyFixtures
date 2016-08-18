@@ -3,7 +3,7 @@
 require_once(__DIR__.'/../vendor/autoload.php');
 
 use Ekiwok\TinyFixtures\FixturesGenerator;
-use Ekiwok\TinyFixtures\TestFixtures\Vector;
+use spec\Ekiwok\TinyFixtures\TestFixtures\Vector;
 
 $generator = new FixturesGenerator();
 $vector = $generator->generate(Vector::class, [[1,2,3],[3,4,5]]);

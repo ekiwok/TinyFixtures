@@ -1,6 +1,6 @@
 <?php
 
-namespace Ekiwok\TinyFixtures\TestFixtures;
+namespace spec\Ekiwok\TinyFixtures\TestFixtures;
 
 class Point
 {

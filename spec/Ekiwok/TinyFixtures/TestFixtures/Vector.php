@@ -1,13 +1,13 @@
 <?php
 
-namespace Ekiwok\TinyFixtures\TestFixtures;
+namespace spec\Ekiwok\TinyFixtures\TestFixtures;
 
-use Ekiwok\TinyFixtures\Nested\Foo;
+use spec\Ekiwok\TinyFixtures\TestFixtures\Nested\Foo;
 
 class Vector
 {
     /**
-     * @var \Ekiwok\TinyFixtures\TestFixtures\Point
+     * @var \spec\Ekiwok\TinyFixtures\TestFixtures\Point
      */
     private $start;
 
