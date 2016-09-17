@@ -2,7 +2,7 @@
 
 namespace Ekiwok\TinyFixtures;
 
-class FixturesGenerator
+class FixturesGenerator implements FixturesGeneratorInterface
 {
     /**
      * @var PropertyClassGuesser
