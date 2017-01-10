@@ -15,6 +15,9 @@ class FixturesGenerator implements FixturesGeneratorInterface
     }
 
     /**
+     *
+     * @deprecated
+     *
      * @param $fixtureClass
      * @param array $data
      *
